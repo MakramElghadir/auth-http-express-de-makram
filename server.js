@@ -5,6 +5,15 @@ const app = express();
 
 const realm = 'User Visible Realm';
 
+function saludo(req, res, next){
+  console.log("hola")
+  return next()
+}
+
+app.get('test', (req, res) => {
+  req.send("Saludo")
+})
+
 // Middleware para autenticar usando Auth Basic HTTP
 function authMiddleware(req, res, next) {
   const authHeader = req.headers['authorization'];
@@ -32,6 +41,10 @@ function authMiddleware(req, res, next) {
   // Si las credenciales son correctas, continuar con la siguiente función
   return next();
 }
+
+app.get('/protected', authMiddleware, (req, res) => {
+  
+})
 
 // Rutas protegidas por la autenticación Basic
 app.get('/protected', authMiddleware, (req, res) => {

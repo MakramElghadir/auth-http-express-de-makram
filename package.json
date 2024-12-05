@@ -1,5 +1,5 @@
 {
-  "name": "http-auth",
+  "name": "makram",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -7,11 +7,19 @@
     "start": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "makram",
   "license": "ISC",
-  "description": "",
+  "description": "something",
   "dependencies": {
     "better-sqlite3": "^11.3.0",
     "express": "^4.21.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MakramElghadir/auth-http-express-de-makram.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MakramElghadir/auth-http-express-de-makram/issues"
+  },
+  "homepage": "https://github.com/MakramElghadir/auth-http-express-de-makram#readme"
 }
